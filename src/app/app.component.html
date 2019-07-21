@@ -16,10 +16,11 @@
   <ul class="list-group">
     <li class="list-group-item row" *ngFor="let thread of threads">
       <div class="col-lg-1"><p>Votes</p><p>{{thread.data.ups}}</p></div>
-      <div class="col-lg-11">
+      <div class="col-lg-9">
       <h3>{{thread.data.title}}</h3>
       <a target="_blank" [href]="'https://reddit.com' + thread.data.permalink">See thread</a>
     </div>
+    <div class="col-lg-2"><img class="float-right" src={{thread.data.thumbnail}} *ngIf="thread.data.thumbnail" alt="no image available"></div>
     </li>
   </ul>
 </div>
